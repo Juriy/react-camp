@@ -2,6 +2,7 @@ import TvShowItem from './TvShowItem';
 import { StaticRouter as Router } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { axe } from 'jest-axe';
 
 test('renders a tv show item with a label "add to favorites"', () => {
   const TestComponent = () => (
@@ -91,4 +92,23 @@ test('matches snapshot for favorited', () => {
   );
   const { container } = render(<TestComponent />);
   expect(container).toMatchSnapshot();
+});
+
+test('is accessible', async () => {
+  const TestComponent = () => (
+    <Router>
+      <TvShowItem
+        favorited
+        id={2}
+        name="Game of Thrones"
+        posterSrc="/path/to/poster.png"
+        rating={8.5}
+        overview="some overview here"
+        releaseDate="11.11.2011"
+      />
+    </Router>
+  );
+  const { container } = render(<TestComponent />);
+  const results = await axe(container);
+  expect(results).toHaveNoViolations();
 });
