@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div>
+  <div
+    class="ui card"
+  >
+    <a
+      class="ui image"
+      href="/details/undefined"
+    >
+      <img
+        src="https://image.tmdb.org/t/p/w500/undefined"
+        width="50"
+      />
+    </a>
+    <div
+      class="content"
+    >
+      <div
+        class="header"
+      />
+      <div
+        class="meta"
+      />
+    </div>
+    <div
+      class="content"
+    >
+      <i
+        aria-hidden="true"
+        class="star icon"
+      />
+    </div>
+    <div
+      class="content"
+    >
+      <button
+        class="ui green basic fluid button"
+        type="button"
+      >
+        Add to favorites
+      </button>
+    </div>
+  </div>
+</div>
+`;

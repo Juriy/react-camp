@@ -32,8 +32,14 @@ const TvShowItem = ({
         {rating}
       </Card.Content>
       <Card.Content>
-        <Button onClick={onClick} fluid color="green" basic={!favorited}>
-          Add to favorites
+        <Button
+          type="button"
+          onClick={onClick}
+          fluid
+          color="green"
+          basic={!favorited}
+        >
+          {favorited ? 'Remove from favorites' : 'Add to favorites'}
         </Button>
       </Card.Content>
     </Card>

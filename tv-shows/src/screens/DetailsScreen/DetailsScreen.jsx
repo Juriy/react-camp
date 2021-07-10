@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Breadcrumb } from "semantic-ui-react";
 import { Link } from 'react-router-dom';
-import { Icon, Label } from 'semantic-ui-react';
+import { Label } from 'semantic-ui-react';
 
 const DetailsScreen = () => {
   const [details, setDetails] = useState({});
