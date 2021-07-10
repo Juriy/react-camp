@@ -1,3 +1,3 @@
-module.export = {
-  add: jest.fn(() => 1)
-}
+module.exports = {
+  add: jest.fn(() => 1),
+};
