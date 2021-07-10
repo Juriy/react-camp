@@ -7,10 +7,11 @@ exports[`matches snapshot 1`] = `
   >
     <a
       class="ui image"
-      href="/details/undefined"
+      href="/details/2"
     >
       <img
-        src="https://image.tmdb.org/t/p/w500/undefined"
+        alt="Game of Thrones"
+        src="https://image.tmdb.org/t/p/w500//path/to/poster.png"
         width="50"
       />
     </a>
@@ -19,10 +20,14 @@ exports[`matches snapshot 1`] = `
     >
       <div
         class="header"
-      />
+      >
+        Game of Thrones
+      </div>
       <div
         class="meta"
-      />
+      >
+        11.11.2011
+      </div>
     </div>
     <div
       class="content"
@@ -31,6 +36,7 @@ exports[`matches snapshot 1`] = `
         aria-hidden="true"
         class="star icon"
       />
+      8.5
     </div>
     <div
       class="content"
@@ -40,6 +46,58 @@ exports[`matches snapshot 1`] = `
         type="button"
       >
         Add to favorites
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`matches snapshot for favorited 1`] = `
+<div>
+  <div
+    class="ui card"
+  >
+    <a
+      class="ui image"
+      href="/details/2"
+    >
+      <img
+        alt="Game of Thrones"
+        src="https://image.tmdb.org/t/p/w500//path/to/poster.png"
+        width="50"
+      />
+    </a>
+    <div
+      class="content"
+    >
+      <div
+        class="header"
+      >
+        Game of Thrones
+      </div>
+      <div
+        class="meta"
+      >
+        11.11.2011
+      </div>
+    </div>
+    <div
+      class="content"
+    >
+      <i
+        aria-hidden="true"
+        class="star icon"
+      />
+      8.5
+    </div>
+    <div
+      class="content"
+    >
+      <button
+        class="ui green fluid button"
+        type="button"
+      >
+        Remove from favorites
       </button>
     </div>
   </div>

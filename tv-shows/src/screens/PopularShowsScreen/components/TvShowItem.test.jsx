@@ -61,7 +61,32 @@ test('toggle favorites button when the component is being clicked', () => {
 test('matches snapshot', () => {
   const TestComponent = () => (
     <Router>
-      <TvShowItem />
+      <TvShowItem
+        id={2}
+        name="Game of Thrones"
+        posterSrc="/path/to/poster.png"
+        rating={8.5}
+        overview="some overview here"
+        releaseDate="11.11.2011"
+      />
+    </Router>
+  );
+  const { container } = render(<TestComponent />);
+  expect(container).toMatchSnapshot();
+});
+
+test('matches snapshot for favorited', () => {
+  const TestComponent = () => (
+    <Router>
+      <TvShowItem
+        favorited
+        id={2}
+        name="Game of Thrones"
+        posterSrc="/path/to/poster.png"
+        rating={8.5}
+        overview="some overview here"
+        releaseDate="11.11.2011"
+      />
     </Router>
   );
   const { container } = render(<TestComponent />);
