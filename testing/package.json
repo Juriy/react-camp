@@ -9,10 +9,10 @@
   "scripts": {
     "custom-test": "node ./custom-tests/math.js",
     "test": "jest --watchAll",
-    "test-ci": "jest",
     "lint": "eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\"",
-    "validate": "npm run lint && npm run format"
+    "validate": "npm run lint && npm run format",
+    "test-ci": "npm run validate && jest"
   },
   "author": "",
   "license": "ISC",
